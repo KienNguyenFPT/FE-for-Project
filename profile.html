@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile user</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h-font {
+            font-family: 'Merienda', cursive;
+        }
+
+        body {
+            margin-top:20px;
+            background-color:#f2f6fc;
+            color:#69707a;
+        }
+        
+        .img-account-profile {
+            height: 10rem;
+        }
+
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+
+        .card {
+            box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+        }
+
+        .card .card-header {
+            font-weight: 500;
+        }
+
+        .card-header:first-child {
+            border-radius: 0.35rem 0.35rem 0 0;
+        }
+
+        .card-header {
+            padding: 1rem 1.35rem;
+            margin-bottom: 0;
+            background-color: rgba(33, 40, 50, 0.03);
+            border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+        }
+
+        .form-control, .dataTable-input {
+            display: block;
+            width: 100%;
+            padding: 0.875rem 1.125rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1;
+            color: #69707a;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #c5ccd6;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0.35rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .nav-borders .nav-link.active {
+            color: #0061f2;
+            border-bottom-color: #0061f2;
+        }
+
+        .nav-borders .nav-link {
+            color: #69707a;
+            border-bottom-width: 0.125rem;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }  
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.html">Kiot Website</a>
+          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-2" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="room.html">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="about.html">About us</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                
+                <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Logout
+                </button>  
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-xl px-4 mt-4">
+        <nav class="nav nav-borders">
+            <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank">Profile</a>
+        </nav>
+        <hr class="mt-0 mb-4">
+        <div class="row">
+    <div class="col-xl-4">
+
+    <div class="card mb-4 mb-xl-0">
+    <div class="card-header">Profile Picture</div>
+
+    <div class="card-body text-center">
+    <img class="img-account-profile rounded-circle mb-2" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/385082721_2058056187874485_3752357744586772707_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=69rzbw5SHfMAX8TRrgW&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfAzLR_mcId-OMgxmQf4H6fRDogxomjuEzFrNFfRWhoXrw&oe=652A8895" alt>
+
+    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+        <button class="btn btn-primary" type="button" id ="uploadButton">Upload new image</button>
+        <input type="file" id="fileInput" style="display: none;">
+    </div>
+
+    </div>
+    </div>
+    <div class="col-xl-8">
+
+    <div class="card mb-4">
+    <div class="card-header">Account Details</div>
+    <div class="card-body">
+    <form>
+
+    <div class="mb-3">
+        <label class="small mb-1" for="inputUsername">Username</label>
+        <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="KienNguyenFPT">
+    </div>
+
+    <div class="row gx-3 mb-3">
+        <div class="col-md-6">
+            <label class="small mb-1" for="inputFirstName">First name</label>
+            <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Kien">
+        </div>
+
+        <div class="col-md-6">
+            <label class="small mb-1" for="inputLastName">Last name</label>
+            <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Nguyen">
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="small mb-1" for="inputEmailAddress">Gmail</label>
+        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="kiennguyen@gmail.com">
+    </div>
+
+    <div class="mb-3">
+        <label class="small mb-1" for="inputEmailAddress">Address</label>
+        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="Quy Nhon - Binh dinh">
+    </div>
+
+    <div class="row gx-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Phone number</label>
+            <input type="number" class="form-control shadow-none">
+        </div>
+        
+        <div class="col-md-6">
+            <label class="form-label">Date of birth</label>
+            <input type="date" class="form-control shadow-none">
+        </div>
+    </div>
+
+    <div class="row gx-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Picture Identify 1</label>
+            <input type="file" class="form-control shadow-none">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Picture Identify 2</label>
+            <input type="file" class="form-control shadow-none">
+        </div>
+
+    </div>
+    
+
+
+    <button class="btn btn-primary" type="button">Save changes</button>
+    </form>
+    </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid bg-white mt-5">
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <h3 class="h-font fw-bold fs-3 mb-2">KIOT HOTEL</h3>
+                <p>
+                    Kiot Hotel was established in September 2023, with CEOs in King Of Loser team. 
+                    With the goal of always making customers happy and building trust in the first place, we will always bring you services, providing excellent experience in this place.
+                </p>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <h5 class="mb-3">Links</h5>
+                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none"> Home </a> <br>
+                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none"> Rooms </a> <br>
+                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none"> Facilities </a> <br>
+                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none"> Contact us </a> <br>
+                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none"> About </a>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <h5 class="mb-3">Follow us</h5>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-envelope"></i> Gmail</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-facebook"></i> Facebook</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-twitter"></i> Twitter</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-instagram"></i> Instagram</a><br>
+            </div>
+        </div>
+    </div>
+    <h6 class="text-center bg-dark text-white p-3 m-0">Developed by KING OF LOSER TEAM - FPTU - SE17B.NET</h6>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('uploadButton').addEventListener('click', function() {
+                document.getElementById('fileInput').click();
+            });
+        });
+        </script>
+</body>
+</html>

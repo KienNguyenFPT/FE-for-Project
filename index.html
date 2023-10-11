@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Trung Kien - QE170207
+    Was designed at: 1.00 PM - 14/09/23
+    Copyright belonged to Group 5 - SE17.NET - FPTU
+    Please don't re-up our enthusiasm project in anyways - Great Thanks!
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellcome | Kiot Hotel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.8/swiper-bundle.min.css" /> <!-- Swiper CSS-->
+    
+    <!--More template--> 
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+ 
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h-font {
+            font-family: 'Merienda', cursive;
+        }
+        
+        .custom-bg {
+            background-color: #2ec1ac;
+        }
+
+        .custom-bg:hover {
+            background-color: #3d279e;
+        }
+    
+        @media screen and (max-width: 575px) {
+            .avai-form {
+                margin-top: 0px;
+                padding: 0 35px;
+            }           
+        }       
+    </style>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+
+<body class="bg-light8">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.html">Kiot Website</a>
+          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-2" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="room.html">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="facilities.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="about.html">About us</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                
+                <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button> 
+
+                <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Register
+                </button>      
+            </div>
+          </div>
+        </div>
+    </nav>
+   <!--Modal Login, Register-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center"><i class="bi bi-person-heart me-2"></i> User Login</h5>
+                             <!--   
+                            <button type="reset" class="close shadow-none" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control shadow-none">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control shadow-none" >                               
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <button type="submit" class="btn btn-dark shadow-none">
+                                    LOGIN
+                                </button>
+                                <a href="javascript: void(0)" class="text-secondary text-decoration-none">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center">
+                                <i class="bi bi-person-heart me-2"></i> User Login</h5>
+                            <button type="reset" class="close shadow-none" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control shadow-none">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control shadow-none" >                               
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <button type="submit" class="btn btn-dark shadow-none">
+                                    LOGIN
+                                </button>
+                                <a href="javascript: void(0)" class="text-secondary text-decoration-none">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="modal fade" id="registerModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center">
+                                <i class="bi bi-person-lines-fill me-2"></i> User Registration
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Note: Your details must match with your ID(passport, driving license, etc) that will be required 
+                                during check-in process.    
+                            </span>
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Your username</label>
+                                        <input type="text" class="form-control shadow-none">
+                                    </div>
+
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Email address</label>
+                                        <input type="email" class="form-control shadow-none">
+                                    </div>
+
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Phone number</label>
+                                        <input type="number" class="form-control shadow-none">
+                                    </div>
+
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Date of birth</label>
+                                        <input type="date" class="form-control shadow-none">
+                                    </div>
+                                    <!--
+                                    <div class="col-md-12 ps-0 mb-3">
+                                        <label class="form-label">Picture</label>
+                                        <input type="file" class="form-control shadow-none">
+                                    </div>
+                                    -->
+                                    <div class="col-md-12 ps-0 mb-3">
+                                        <label class="form-label">Address</label>
+                                        <input type="text" class="form-control shadow-none">
+                                    </div>
+
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control shadow-none">
+                                    </div>
+
+                                    <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Confirm your password</label>
+                                        <input type="password" class="form-control shadow-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-dark shadow-none">
+                                    REGISTER
+                                </button>
+                            </div>
+                        </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper-->
+    <!--
+    <div class="container-fluid px-lg-4 mt-4">
+        <div class="swiper kiendeptrai">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/IMG_93127.png" class="w-100 d-block"/>
+                </div>   
+                
+                <div class="swiper-slide">
+                    <img src="images/IMG_62045.png" class="w-100 d-block"/>
+                </div>      
+                <div class="swiper-slide">
+                    <img src="images/IMG_55677.png" class="w-100 d-block"/>
+                </div>      
+                <div class="swiper-slide">
+                    <img src="images/IMG_15372.png" class="w-100 d-block"/>
+                </div>      
+                <div class="swiper-slide">
+                    <img src="images/IMG_40905.png" class="w-100 d-block"/>
+                </div>               
+            </div>         
+        </div>       
+    </div>
+    -->
+
+    <!--Carousel-->
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url(images/IMG_15372.png);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate text-center">
+          	<div class="text mb-5 pb-3">
+	            <h1 class="mb-3">Welcome To Kiot Hotel </h1>
+	            <h2 class="">Luxury - Modern - Convenient</h2>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(images/IMG_55677.png);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-12 ftco-animate text-center">
+          	<div class="text mb-5 pb-3">
+	            <h1 class="mb-3">Enjoy A Luxury Experience</h1>
+	            <h2>Join With Us</h2>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url(images/IMG_40905.png);">
+        <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate text-center">
+            <div class="text mb-5 pb-3">
+              <h1 class="mb-3">We Are Always Highly Appreciate Your Feelings</h1>
+              <h2>Join With Us</h2>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="slider-item" style="background-image:url(images/IMG_62045.png);">
+        <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-12 ftco-animate text-center">
+            <div class="text mb-5 pb-3">
+              <h1 class="mb-3">Greatest Thanks From Your Booking</h1>
+              <h2>Join With Us</h2>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- Check availablity Once -->
+    <section class="ftco-booking">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-12">
+    				<form action="#" class="booking-form">
+	        		<div class="row">
+	        			<div class="col-md-3 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+				    					<label for="#">Check-in</label>
+				    					<input type="text" class="form-control checkin_date" placeholder="Check-in date">
+			    					</div>
+			    				</div>
+	        			</div>
+	        			<div class="col-md-3 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+				    					<label for="#">Check-out</label>
+				    					<input type="text" class="form-control checkout_date" placeholder="Check-out date">
+			    				</div>
+			    				</div>
+	        			</div>
+	        			<div class="col-md-2 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+			      					<label for="#">Room</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                    <select name="" id="" class="form-control">
+			                    	<option value="">Suite Room</option>
+			                      <option value="">Family Room</option>
+			                      <option value="">Deluxe Room</option>
+			                      <option value="">Classic Room</option>
+			                      <option value="">Superior Room</option>
+			                      <option value="">Luxury Room</option>
+			                    </select>
+			                  </div>
+				              </div>
+				            </div>
+		              </div>
+	        			</div>
+	        			<div class="col-md-2 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+			      					<label for="#">Adult</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                    <select name="" id="" class="form-control">
+			                    	<option value="">1 Adult</option>
+			                      <option value="">2 Adult</option>
+			                      <option value="">3 Adult</option>
+			                      <option value="">4 Adult</option>
+			                      <option value="">5 Adult</option>
+			                      <option value="">6 Adult</option>
+			                    </select>
+			                  </div>
+				              </div>
+				            </div>
+		              </div>
+	        			</div>
+                        <div class="col-md-2 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+			      					<label for="#">Children</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                    <select name="" id="" class="form-control">
+                                    <option value="">None</option>
+			                    	<option value="">1 Children</option>
+			                      <option value="">2 Children</option>
+			                      <option value="">3 Children</option>
+			                      <option value="">4 Children</option>
+			                      <option value="">5 Children</option>
+			                      
+			                    </select>
+			                  </div>
+				              </div>
+				            </div>
+		              </div>
+	        			</div>
+	        			<div class="col-md d-flex">
+	        				<div class="form-group d-flex align-self-stretch">
+			              <input type="submit" value="Check Availability" class="btn btn-primary py-3 px-4 align-self-stretch">
+			            </div>
+	        			</div>
+	        		</div>
+	        	</form>
+	    		</div>
+    		</div>
+    	</div>
+    </section>
+    <!-- Check availablity Twice -->
+    <!--
+    <div class="container avai-form">
+        <div class="row">
+            <div class="col-lg-12 bg-white shadow p-4 rounded">
+                <h5 class="mb-3">Check Booking Availability</h5>
+                <form>
+                    
+                    <div class="row align-items-end">
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Check-in</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+
+                        <div class="col-lg-3 mb-3">
+                           
+                            <label class="form-label" style="font-weight: 500;">Check-out</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Adult</label>
+                            <select class="form-select shadow-none">
+                                <option selected>Select options</option>
+                                <option value="1">One people</option>
+                                <option value="2">Two people</option>
+                                <option value="3">Three people</option>
+                                <option value="4">Four people</option>
+                              </select>
+                        </div>
+
+                        <div class="col-lg-2 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Children</label>
+                            
+                            <select class="form-select shadow-none">
+                                <option selected>Select options </option>
+                                <option value="0">None</option>
+                                <option value="1">One people</option>
+                                <option value="2">Two people</option>
+                                <option value="3">Three people</option>
+                                <option value="4">Four people</option>
+                              </select>
+                        </div>
+
+                        <div class="col-lg-1 mb-lg-3 mt-2">
+                            <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
+                        </div>     
+                    </div>                              
+                </form>   
+            </div>
+        </div>
+    </div> 
+    -->
+    <!-- Our rooms-->
+    
+    <!--<div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow" style="width: 350px; margin: auto;">
+                    <img src="https://toplist.vn/images/800px/silk-path-grand-hue-hotel-amp-spa-657607.jpg" class="card-img-top" alt="">
+
+                    <div class="card-body">
+                        <h5 class="">Name of the room</h5>
+                        <h6>Price: 200$ per night</h6>
+                        <div class="features mb-1">
+                                <h6 class="mb-1">Features</h6>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 rooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 bathrooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    3 sofas
+                                </span>
+                        </div>
+                      
+                        <div class="facilities mb-1">
+                            <h6 class="mb-1">
+                                    Facilities
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Television
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Wifi/5G
+                            </span>
+                        </div>
+
+                        <div class="rating mb-1">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="" class="btn btn-sm text-white custom-bg shadow-none" style="margin-right: 50px;">Book now</a>
+                            
+                            <a href="" class="btn btn-primary">More details</a>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow" style="width: 350px; margin: auto;">
+                    <img src="https://toplist.vn/images/800px/silk-path-grand-hue-hotel-amp-spa-657607.jpg" class="card-img-top" alt="">
+
+                    <div class="card-body">
+                        <h5 class="">Name of the room</h5>
+                        <h6>Price: 200$ per night</h6>
+                        <div class="features mb-1">
+                                <h6 class="mb-1">Features</h6>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 rooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 bathrooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    3 sofas
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    3 sofas
+                                </span>
+                        </div>
+                      
+                        <div class="facilities mb-1">
+                            <h6 class="mb-1">
+                                    Facilities
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Television
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Wifi/5G
+                            </span>
+                        </div>
+
+                        <div class="rating mb-1">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="" class="btn btn-sm text-white custom-bg shadow-none" style="margin-right: 50px;">Book now</a>
+                            
+                            <a href="" class="btn btn-primary">More details</a>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow" style="width: 350px; margin: auto;">
+                    <img src="https://toplist.vn/images/800px/silk-path-grand-hue-hotel-amp-spa-657607.jpg" class="card-img-top" alt="">
+
+                    <div class="card-body">
+                        <h5 class="">Name of the room</h5>
+                        <h6>Price: 200$ per night</h6>
+                        <div class="features mb-1">
+                                <h6 class="mb-1">Features</h6>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 rooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    2 bathrooms
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                    3 sofas
+                                </span>
+                        </div>
+                      
+                        <div class="facilities mb-1">
+                            <h6 class="mb-1">
+                                    Facilities
+                            </h6>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Television
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                                Wifi/5G
+                            </span>
+                        </div>
+
+                        <div class="rating mb-1">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="" class="btn btn-sm text-white custom-bg shadow-none" style="margin-right: 50px;">Book now</a>
+                            
+                            <a href="" class="btn btn-primary">More details</a>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center mt-5">
+                <a href="" class="btn btn-sm btn-outline-dark rounded-0 fm-bold shadow-none">
+                    More rooms
+                </a>
+            </div>
+        </div>
+    </div>
+-->
+    <!--Room START-->
+    <div class="container">
+        <section class="ftco-section bg-light">
+            <div class="container">
+                    <div class="row justify-content-center mb-5 pb-3">
+              <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR ROOMS</h2>
+              </div>
+            </div>    		
+                <div class="row">
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="suiteRoom.html">Suite Room</a></h3>
+                                <p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="suiteRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-2.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="familyRoom.html">Family Room</a></h3>
+                                <p><span class="price mr-2">$20.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="familyRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-3.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="deluxeRoom.html.html">Deluxe Room</a></h3>
+                                <p><span class="price mr-2">$150.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="deluxeRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-4.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="classicRoom.html">Classic Room</a></h3>
+                                <p><span class="price mr-2">$130.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="classicRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-5.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="superiorRoom.html">Superior Room</a></h3>
+                                <p><span class="price mr-2">$300.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="superiorRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+                            <a href="room.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-6.jpg);">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3"><a href="luxuryRoom.html">Luxury Room</a></h3>
+                                <p><span class="price mr-2">$500.00</span> <span class="per">per night</span></p>
+                                <hr>
+                                <p class="pt-1"><a href="luxuryRoom.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR ROOMS</h2>
+          </div>
+        </div>    		
+    		<div class="row">
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
+    						<p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-2.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Family Room</a></h3>
+    						<p><span class="price mr-2">$20.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-3.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
+    						<p><span class="price mr-2">$150.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-4.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Classic Room</a></h3>
+    						<p><span class="price mr-2">$130.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-5.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Superior Room</a></h3>
+    						<p><span class="price mr-2">$300.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-6.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3 text-center">
+    						<h3 class="mb-3"><a href="rooms.html">Luxury Room</a></h3>
+    						<p><span class="price mr-2">$500.00</span> <span class="per">per night</span></p>
+    						<hr>
+    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+-->
+    <!--END-->
+
+    <!-- Facilities -->
+    <div class="row no-gutters justify-content-center">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR FACILITIES</h2>
+        </div>
+    </div>
+
+    <!---->
+    <section class="ftco-section">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services py-4 d-block text-center">
+                <div class="d-flex justify-content-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-reception-bell"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                  <h3 class="heading mb-3">24/7 Front Desk</h3>
+                  <p>Convenient with all of your time.</p>
+                </div>
+              </div>      
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services py-4 d-block text-center">
+                <div class="d-flex justify-content-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-serving-dish"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                  <h3 class="heading mb-3">Restaurant Bar</h3>
+                  <p>Delicicous food and love!</p>
+                </div>
+              </div>    
+            </div>
+            <div class="col-md-3 d-flex align-sel Searchf-stretch ftco-animate">
+              <div class="media block-6 services py-4 d-block text-center">
+                <div class="d-flex justify-content-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-car"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                  <h3 class="heading mb-3">Transfer Services</h3>
+                  <p>Convenient transferrrrrrrrrrrrrrrrrrrrrrrrrrr</p>
+                </div>
+              </div>      
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services py-4 d-block text-center">
+                <div class="d-flex justify-content-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-spa"></span>
+                    </div>
+                </div>
+                <div class="media-body p-2 mt-2">
+                  <h3 class="heading mb-3">Spa Suites</h3>
+                  <p>Relax and chillllllllllllllllllllllllllllllllllllllll</p>
+                </div>
+              </div>      
+            </div>
+          </div>
+        </div>
+      </section>
+    <!---->
+    <!--
+    <div class="container">
+        <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+
+            <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src="data:image/png;base64,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" width="80px">
+                <h5 class="mt-3">Wifi</h5>
+            </div>
+        </div>
+        
+        <div class="col-lg-12 text-center mt-5">
+            <a href="" class="btn btn-sm btn-outline-dark rounded-0 fm-bold shadow-none">
+                More facilities
+            </a>
+        </div>
+    </div> -->
+    
+    <!--Feedback-->
+    <div class="row no-gutters justify-content-center pb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">FEEDBACKS</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="swiper swiper_fb">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center p-3 mb-1">
+                        <img src="images/features/customers.svg" width="30px">
+                        <h6 class="m-0 ms-2">Thái Dương</h6>
+                    </div>
+                    <p>
+                        Ok ban eiiiiiiiii
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        Toi yeu em nhieu lam
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>      
+                
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center p-4">
+                        <img src="images/features/customers.svg" width="30px">
+                        <h6 class="m-0 ms-2">Con vợ Thái Dương</h6>
+                    </div>
+                    <p>
+                        Ok ban eiiiiiiiii
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        Toi yeu em nhieu lam
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>   
+
+                <div class="swiper-slide bg-white p-4">
+                    <div class="profile d-flex align-items-center p-4">
+                        <img src="images/features/customers.svg" width="30px">
+                        <h6 class="m-0 ms-2">Con vợ Thái Dương</h6>
+                    </div>
+                    <p>
+                        Ok ban eiiiiiiiii
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        Toi yeu em nhieu lam
+                    </p>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>     
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="row no-gutters justify-content-center pb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">CONTACT US</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-light rounded">
+                <iframe class="w-100 rounded" height="300px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.5847248662644!2d109.21657047421918!3d13.803889596087158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6bf778c80973%3A0x8a7d0b5aa0af29c7!2sFPT%20University%20Quy%20Nhon%20AI%20Campus!5e0!3m2!1sen!2s!4v1695803634294!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <div class="bg-light rounded p-4 mb-4">
+                    <h5>Call us: </h5>
+                        <a href="" class="d-inline-block mb-2 text-decoration-none text-dark">
+                            <i class="bi bi-telephone-forward-fill"></i>  +84964641839
+                        </a>
+                </div>
+
+                <div class="bg-light rounded p-4 mb-4">
+                    <h5>Follow us on platform: </h5>
+                        <a href="" class="d-inline-block mb-3">
+                            <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-facebook"></i> Facebook
+                            </span>
+                        </a>
+                        <br>
+                        <a href="" class="d-inline-block mb-3">
+                            <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </span>
+                        </a>
+                        <br>
+                        <a href="" class="d-inline-block mb-3">
+                            <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-envelope"></i> Gmail
+                            </span>
+                        </a>
+                        <br>
+                        <a href="" class="d-inline-block mb-3">
+                            <span class="badge bg-light text-dark fs-6 p-2">
+                                <i class="bi bi-twitter"></i> Twitter
+                            </span>
+                        </a>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!--Ig-->   
+    <section class="instagram">
+        <div class="container-fluid">
+          <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">INSTAGRAMS</h2>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-sm-12 col-md ftco-animate">
+              <a href="images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                <div class="icon d-flex justify-content-center">
+                  <span class="icon-instagram align-self-center"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md ftco-animate">
+              <a href="images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(images/insta-2.jpg);">
+                <div class="icon d-flex justify-content-center">
+                  <span class="icon-instagram align-self-center"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md ftco-animate">
+              <a href="images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(images/insta-3.jpg);">
+                <div class="icon d-flex justify-content-center">
+                  <span class="icon-instagram align-self-center"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md ftco-animate">
+              <a href="images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(images/insta-4.jpg);">
+                <div class="icon d-flex justify-content-center">
+                  <span class="icon-instagram align-self-center"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md ftco-animate">
+              <a href="images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(images/insta-5.jpg);">
+                <div class="icon d-flex justify-content-center">
+                  <span class="icon-instagram align-self-center"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-white mt-5">
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <h3 class="h-font fw-bold fs-3 mb-2">KIOT HOTEL</h3>
+                <p>
+                    Kiot Hotel was established in September 2023, with CEOs in King Of Loser team. 
+                    With the goal of always making customers happy and building trust in the first place, we will always bring you services, providing excellent experience in this place.
+                </p>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <h5 class="mb-3">Links</h5>
+                <a href="index.html" class="d-inline-block mb-2 text-dark text-decoration-none"> Home </a> <br>
+                <a href="room.html" class="d-inline-block mb-2 text-dark text-decoration-none"> Rooms </a> <br>
+                <a href="facilities.html" class="d-inline-block mb-2 text-dark text-decoration-none"> Facilities </a> <br>
+                <a href="contact.html" class="d-inline-block mb-2 text-dark text-decoration-none"> Contact us </a> <br>
+                <a href="about.html" class="d-inline-block mb-2 text-dark text-decoration-none"> About </a>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <h5 class="mb-3">Follow us</h5>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-envelope"></i> Gmail</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-facebook"></i> Facebook</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-twitter"></i> Twitter</a><br>
+                <a href="" class="d-inline-block text-dark text-decoration-none mb-2"> <i class="bi bi-instagram"></i> Instagram</a><br>
+            </div>
+        </div>
+    </div>
+    <h6 class="text-center bg-dark text-white p-3 m-0">Developed by KING OF LOSER TEAM - FPTU - SE17B.NET</h6>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>     
+    <script src="https://unpkg.com/swiper@7.0.8/swiper-bundle.min.js"></script> -->
+    <!--More js file -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+     <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".kiendeptrai", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+                var swiper = new Swiper(".swiper_fb", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                }
+            }); 
+        });
+    </script>
+    </body>
+</html>
