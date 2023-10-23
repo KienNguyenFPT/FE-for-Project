@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail question</title>
-
-    
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Service Management | Edit service</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
@@ -13,12 +11,11 @@
 	<link rel="stylesheet" href="assets/css/feathericon.min.css">
 	<link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
 	<link rel="stylesheet" href="assets/plugins/morris/morris.css">
-	<link rel="stylesheet" href="assets/css/style.css"> 
-    
+	<link rel="stylesheet" href="assets/css/style.css"> </head>
 </head>
 <body>
     <div class="main-wrapper">
-		<!--Header-->
+         <!--Header-->
 		<div class="header">
 			<div class="header-left">
 				<a href="indexAdmin.html" class="logo"> <img src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/385082721_2058056187874485_3752357744586772707_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=hig-cOXhfnsAX_NrhFX&_nc_ht=scontent.fdad1-3.fna&oh=00_AfCyldoWLvIN0qN_ZeLi1fbXJtSTX3JOjUn4AnlwnZHhRA&oe=652A8895" width="50" height="70" alt="logo"> <span class="logoclass">KIOT HOTEL</span> </a>
@@ -253,150 +250,87 @@
 				</div>
 			</div>
 		</div>
-		<!--Detail question starts -->
+		<!--Edit Service start-->
         <div class="page-wrapper">
-            <div class="content container-fluid">
+			<div class="content mt-5">
 				<div class="page-header">
 					<div class="row align-items-center">
 						<div class="col">
-							<h3 class="page-title mt-5">Detail questions</h3> </div>
+							<h3 class="page-title mt-2">Edit Service</h3> </div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row mt-3">
 					<div class="col-lg-12">
 						<form>
 							<div class="row formtype">
 								<div class="col-md-4">
 									<div class="form-group">
-										<label>Booking ID</label>
-										<input class="form-control" type="text" value="BKG-0001" readonly> </div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Gmail</label>
-										<input class="form-control" type="text" value="raikungfu@gmail.com" readonly> </div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Subject</label>
-										<input class="form-control" type="text" value="Hihi haha" readonly> </div>
-								</div>
-								
-								
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Message</label>
-										<textarea class="form-control" rows="3" id="comment" name="text" placeholder="Khi con mua dan phai" readonly></textarea>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Response to custormer</label>
-										<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-									</div>
+										<label>Service ID</label>
+										<input class="form-control" type="text" value=""> </div>
 								</div>
 
                                 <div class="col-md-4">
 									<div class="form-group">
-										<label>Status</label>
-										<select class="form-control" id="sel3" name="sellist1">
-											<option>Select</option>
-											<option>Reject answer</option>
-											<option>Answering</option>
-											<option>Answered</option>
-										</select>
-									</div>
-                                    <button type="button" class="btn btn-primary buttonedit1">Send response</button>
-                                    
-								</div>                            
-							</div>
-						</form>
-					</div>
-				</div>			
-			</div>
-            <div style="text-align: center ;">
-                <p>------------------------------------------------------------</p>
-            </div>
-            
-		</div>
-
-        <div class="page-wrapper">
-            <div class="content container-fluid">
-				
-				<div class="row">
-					<div class="col-lg-12">
-						<form>
-							<div class="row formtype">
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Booking ID</label>
-										<input class="form-control" type="text" value="BKG-0001" readonly> </div>
+										<label>Service Name</label>
+										<input class="form-control" type="text" value=""> </div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
-										<label>Gmail</label>
-										<input class="form-control" type="text" value="raikungfu@gmail.com" readonly> </div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Subject</label>
-										<input class="form-control" type="text" value="Hihi haha" readonly> </div>
-								</div>
-								
-								
-								<div class="col-md-4">
-									<div class="form-group">
-										<label>Message</label>
-										<textarea class="form-control" rows="3" id="comment" name="text" placeholder="Khi con mua dan phai" readonly></textarea>
+										<label>File Upload</label>
+										<div class="custom-file mb-3">
+											<input type="file" class="custom-file-input" id="customFile" name="filename">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
 									</div>
 								</div>
 								
 								<div class="col-md-4">
 									<div class="form-group">
-										<label>Response to custormer</label>
-										<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+										<label>Service Description</label>
+										<textarea cols="30" rows="6" class="form-control"></textarea>
 									</div>
 								</div>
-
                                 <div class="col-md-4">
 									<div class="form-group">
-										<label>Status</label>
-										<select class="form-control" id="sel3" name="sellist1">
-											<option>Select</option>
-											<option>Reject answer</option>
-											<option>Answering</option>
-											<option>Answered</option>
-										</select>
+										<label>Room applied</label>
+										<input class="form-control" type="text" value=""> </div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="display-block">Service Status</label>
 									</div>
-                                    <button type="button" class="btn btn-primary buttonedit1">Send response</button>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="status" id="blog_active" value="option1" checked>
+										<label class="form-check-label" for="blog_active"> Active </label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="status" id="blog_inactive" value="option2">
+										<label class="form-check-label" for="blog_inactive"> Inactive </label>
+									</div>
 								</div>
 							</div>
+							<button type="button" class="btn btn-primary buttonedit1 mt-4">Save Updating Service</button>
 						</form>
 					</div>
 				</div>
-                <div style="text-align: center ;">
-                    <p>------------------------------------------------------------</p>
-                </div>				
 			</div>
 		</div>
-        <!--Detail ends-->
-	</div>
-
+    </div>
     
-</nav>
-    
-    
-
-	
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="assets/plugins/raphael/raphael.min.js"></script>
-<script src="assets/js/script.js"></script>
-    
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/plugins/raphael/raphael.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script>
+		$(function() {
+			$('#datetimepicker3').datetimepicker({
+				format: 'LT'
+			});
+		});
+		</script>
 </body>
 </html>
